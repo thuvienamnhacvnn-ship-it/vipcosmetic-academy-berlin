@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   const phone = String(body?.phone ?? "").trim();
   const password = String(body?.password ?? "");
   const department = String(body?.department ?? "");
-  const allowed = new Set(departments.map((d) => d.id));
+  const allowed = new Set<string>(departments.map((d) => d.id));
   if (!name || !email || !phone || password.length < 6 || !allowed.has(department)) {
     return NextResponse.json({ ok: false, error: "invalid" }, { status: 400 });
   }
