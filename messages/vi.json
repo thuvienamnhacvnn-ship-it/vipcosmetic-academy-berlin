@@ -28,7 +28,7 @@
     "details": "Chi tiết"
   },
   "home": {
-    "kicker": "Berlin-Lichtenberg · Dong Xuan Center",
+    "kicker": "Berlin-Lichtenberg · Herzbergstraße 56–59",
     "title": "Học nghề làm đẹp tại Berlin.",
     "lead": "Mi, nail, chăm sóc da, chăm sóc chân, phun xăm thẩm mỹ. Thực hành, có chứng chỉ, chuẩn tiệm.",
     "statsStudents": "Học viên ra nghề",
@@ -74,7 +74,7 @@
   },
   "about": {
     "title": "Học viện",
-    "lead": "VIP Cosmetic Academy là trường mỹ phẩm theo hướng da liễu. Năm 2025 mở cơ sở tại Dong Xuan Center — Lichtenberg.",
+    "lead": "VIP Cosmetic Academy là trường mỹ phẩm theo hướng da liễu tại Berlin-Lichtenberg — Herzbergstraße 56–59.",
     "body": "Cơ sở Bochum đã đào tạo chuyên sâu hơn 15 năm, có DEKRA và AZAV. Berlin giữ cùng chuẩn: nhóm nhỏ, mẫu thật, chứng chỉ — tập trung mi, nail, da, chân và phun xăm.",
     "valuesTitle": "Tuyên ngôn",
     "videoKicker": "Video khóa học",
@@ -119,7 +119,7 @@
   },
   "contact": {
     "title": "Liên hệ",
-    "lead": "Campus — Dong Xuan Center, sảnh 18.",
+    "lead": "Campus — Herzbergstraße 56–59, 10365 Berlin-Lichtenberg.",
     "formTitle": "Tin nhắn",
     "submit": "Gửi",
     "ok": "Cảm ơn. Chúng tôi sẽ liên hệ.",
@@ -135,7 +135,7 @@
     "q3": "Có mẫu thật không?",
     "a3": "Có. Thực hành trên mẫu. Bạn cũng có thể đăng ký làm mẫu.",
     "q4": "Campus ở đâu?",
-    "a4": "Dong Xuan Center, Halle 18, Raum 633, Herzbergstraße 128–139, 10365 Berlin-Lichtenberg."
+    "a4": "Herzbergstraße 56–59, 10365 Berlin-Lichtenberg. Tầng trệt, ngay sát bến tram."
   },
   "legal": {
     "imprint": "Impressum",
@@ -202,5 +202,17 @@
   "footer": {
     "tag": "Trường dạy nghề làm đẹp",
     "rights": "Giữ mọi quyền."
+  },
+  "anfahrt": {
+    "kicker": "Đường đến",
+    "title": "Tìm chúng tôi thế nào",
+    "photoAlt": "Toà nhà Herzbergstraße 56–59, studio ở tầng trệt",
+    "photoCaption": "Tầng trệt, ngay sát bến tram.",
+    "tram": "Bến tram ngay trước cửa nhà.",
+    "route": "Chỉ đường",
+    "call": "Gọi điện",
+    "mapTitle": "Bản đồ: Herzbergstraße 56–59, 10365 Berlin",
+    "qrTitle": "Chỉ đường vào điện thoại",
+    "qrHint": "Quét mã QR — bản đồ mở ra và dẫn đường ngay."
   }
 }

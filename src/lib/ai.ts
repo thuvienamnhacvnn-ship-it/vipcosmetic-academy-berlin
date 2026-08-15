@@ -14,8 +14,8 @@ export function localCounsel(question: string, locale: string): string {
   }
   if (/(termin|lịch|hen|besuch|tham quan|modell|mẫu)/.test(q)) {
     return vi
-      ? `Đặt lịch tại /termin hoặc gọi ${site.phone}. Có thể hẹn tư vấn khóa, tham quan campus Dong Xuan (Halle 18) hoặc đăng ký làm mẫu.`
-      : `Termine über /termin oder ${site.phone}. Beratung, Campus-Besichtigung im Dong Xuan Center (Halle 18) oder Modell-Termin.`;
+      ? `Đặt lịch tại /termin hoặc gọi ${site.phone}. Có thể hẹn tư vấn khóa, tham quan campus Herzbergstraße 56–59 hoặc đăng ký làm mẫu.`
+      : `Termine über /termin oder ${site.phone}. Beratung, Campus-Besichtigung Herzbergstraße 56–59 oder Modell-Termin.`;
   }
   if (/(gutschein|bildung|jobcenter|agentur|tài trợ|voucher)/.test(q)) {
     return vi
@@ -23,7 +23,7 @@ export function localCounsel(question: string, locale: string): string {
       : "Viele AZAV-Lehrgänge sind mit Bildungsgutschein möglich. Bei der Anmeldung «Bildungsgutschein» wählen — wir prüfen die Förderfähigkeit.";
   }
   if (/(adresse|address|wo |ở đâu|dong xuan|campus|berlin)/.test(q)) {
-    return `${site.address.line1}, ${site.address.line2}, ${site.address.zip} ${site.address.city}. ${site.phone}`;
+    return `${site.address.street}, ${site.address.zip} ${site.address.city}. ${site.phone}`;
   }
   if (/(preis|học phí|kosten|giá|euro)/.test(q)) {
     const list = publishedCourses()
@@ -60,8 +60,8 @@ export function localCounsel(question: string, locale: string): string {
   }
 
   return vi
-    ? `VIP Cosmetic Academy — ${departments.length} nhóm ngành, ${publishedCourses().length} khóa. Hỏi tên khóa, học phí, Bildungsgutschein hoặc đặt lịch. Campus: ${site.address.line1}. Điện thoại ${site.phone}.`
-    : `VIP Cosmetic Academy — ${departments.length} Ausbildungsfelder, ${publishedCourses().length} Kurse. Frag nach einem Kurs, Preis, Bildungsgutschein oder Termin. Campus: ${site.address.line1}. Tel. ${site.phone}.`;
+    ? `VIP Cosmetic Academy — ${departments.length} nhóm ngành, ${publishedCourses().length} khóa. Hỏi tên khóa, học phí, Bildungsgutschein hoặc đặt lịch. Campus: ${site.address.street}. Điện thoại ${site.phone}.`
+    : `VIP Cosmetic Academy — ${departments.length} Ausbildungsfelder, ${publishedCourses().length} Kurse. Frag nach einem Kurs, Preis, Bildungsgutschein oder Termin. Campus: ${site.address.street}. Tel. ${site.phone}.`;
 }
 
 export async function counsel(question: string, locale: string): Promise<string> {
@@ -88,7 +88,7 @@ export async function counsel(question: string, locale: string): Promise<string>
             role: "system",
             content:
               `Du bist VIP Counsel der VIP Cosmetic Academy. Antworte kurz, höflich, auf der Sprache des Users (de/vi/en). ` +
-              `Campus: ${site.address.line1}, ${site.address.line2}, ${site.address.zip} ${site.address.city}. Tel ${site.phone}. ` +
+              `Campus: ${site.address.street}, ${site.address.zip} ${site.address.city}. Tel ${site.phone}. ` +
               `Katalog: ${catalog}. Keine medizinischen Heilversprechen. Bei Termin auf /termin verweisen.`,
           },
           { role: "user", content: question },

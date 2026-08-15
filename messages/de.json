@@ -28,7 +28,7 @@
     "details": "Details"
   },
   "home": {
-    "kicker": "Berlin-Lichtenberg · Dong Xuan Center",
+    "kicker": "Berlin-Lichtenberg · Herzbergstraße 56–59",
     "title": "Deine Beauty-Ausbildung in Berlin.",
     "lead": "Wimpern, Nägel, Haut, Fußpflege, Permanent Make-up. Praxisnah, zertifiziert, auf Studio-Niveau.",
     "statsStudents": "Absolventinnen",
@@ -74,7 +74,7 @@
   },
   "about": {
     "title": "Die Academy",
-    "lead": "VIP Cosmetic Academy ist eine dermatologisch ausgerichtete Kosmetikfachschule. 2025 öffnete der Standort im Dong Xuan Center — Lichtenberg.",
+    "lead": "VIP Cosmetic Academy ist eine dermatologisch ausgerichtete Kosmetikfachschule in Berlin-Lichtenberg — heute in der Herzbergstraße 56–59.",
     "body": "Der Mutterstandort in Bochum steht für über 15 Jahre Intensivausbildung, DEKRA-Zertifizierung und AZAV-Trägerschaft. Berlin übernimmt denselben Anspruch: kleine Gruppen, Modelle, anerkannte Zertifikate — ausgerichtet auf Wimpern, Nägel, Haut, Fußpflege und Permanent Make-up.",
     "valuesTitle": "Leitbild",
     "videoKicker": "Kursvideos",
@@ -119,7 +119,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "lead": "Campus — Dong Xuan Center, Halle 18.",
+    "lead": "Campus — Herzbergstraße 56–59, Erdgeschoss.",
     "formTitle": "Nachricht",
     "submit": "Senden",
     "ok": "Danke. Wir melden uns.",
@@ -135,7 +135,7 @@
     "q3": "Gibt es Modelle?",
     "a3": "Ja. Praxis findet an Modellen statt. Du kannst dich auch selbst als Modell bewerben.",
     "q4": "Wo genau ist der Campus?",
-    "a4": "Dong Xuan Center, Halle 18, Raum 633, Herzbergstraße 128–139, 10365 Berlin-Lichtenberg."
+    "a4": "Herzbergstraße 56–59, 10365 Berlin-Lichtenberg. Erdgeschoss, direkt an der Tram-Haltestelle."
   },
   "legal": {
     "imprint": "Impressum",
@@ -202,5 +202,17 @@
   "footer": {
     "tag": "Kosmetikfachschule",
     "rights": "Alle Rechte vorbehalten."
+  },
+  "anfahrt": {
+    "kicker": "Anfahrt",
+    "title": "So finden Sie uns",
+    "photoAlt": "Das Haus in der Herzbergstraße 56–59 mit dem Studio im Erdgeschoss",
+    "photoCaption": "Erdgeschoss, direkt an der Tram-Haltestelle.",
+    "tram": "Tram-Haltestelle direkt vor dem Haus.",
+    "route": "Route planen",
+    "call": "Anrufen",
+    "mapTitle": "Karte: Herzbergstraße 56–59, 10365 Berlin",
+    "qrTitle": "Route aufs Handy",
+    "qrHint": "QR-Code scannen — die Navigation startet sofort."
   }
 }
