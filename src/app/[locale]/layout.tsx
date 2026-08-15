@@ -6,6 +6,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Anfahrt } from "@/components/layout/anfahrt";
 import { SocialRail } from "@/components/layout/social-rail";
 import { TabBar } from "@/components/layout/tab-bar";
 import { CounselWidget } from "@/components/ai/counsel";
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
           <main id="main" className="flex-1 pb-[5.75rem] lg:pb-0">
             {children}
           </main>
+          <Anfahrt />
           <Footer />
           <TabBar locale={locale} />
           <CounselWidget />

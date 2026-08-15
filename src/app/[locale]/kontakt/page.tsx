@@ -15,9 +15,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         <p className="mt-4 text-muted">{t("lead")}</p>
         <div className="mt-8 space-y-3 text-sm">
           <p>
-            {site.address.line1}
-            <br />
-            {site.address.line2}
+            {site.address.street}
             <br />
             {site.address.zip} {site.address.city}
           </p>

@@ -13,7 +13,7 @@ export default async function TerminPage({ params }: { params: Promise<{ locale:
         <h1 className="display text-5xl">{t("title")}</h1>
         <p className="mt-4 text-muted">{t("lead")}</p>
         <p className="mt-6 text-sm text-muted">
-          {site.address.line1}
+          {site.address.street}
           <br />
           {site.phone}
         </p>

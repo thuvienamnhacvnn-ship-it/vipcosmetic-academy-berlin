@@ -15,9 +15,9 @@ export async function Footer() {
           <BrandMark size="md" />
           <p className="mt-4 max-w-sm text-sm text-muted">{tf("tag")}</p>
           <p className="mt-3 text-sm text-muted">
-            {site.address.line1}
+            {site.address.street}
             <br />
-            {site.address.line2}, {site.address.zip} {site.address.city}
+            {site.address.zip} {site.address.city}
           </p>
         </div>
         <div className="space-y-2 text-sm">

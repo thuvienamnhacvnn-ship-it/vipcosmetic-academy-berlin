@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           ))}
         </div>
         <p className="mt-12 text-sm text-muted">
-          {site.address.line1}, {site.address.zip} {site.address.city}
+          {site.address.street}, {site.address.zip} {site.address.city}
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href="/anmeldung" className="btn btn-gold">

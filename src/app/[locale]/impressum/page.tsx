@@ -7,9 +7,7 @@ export default function ImpressumPage() {
       <p className="mt-6">
         {site.name}
         <br />
-        {site.address.line1}
-        <br />
-        {site.address.line2}
+        {site.address.street}
         <br />
         {site.address.zip} {site.address.city}
       </p>
