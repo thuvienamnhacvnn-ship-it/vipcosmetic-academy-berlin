@@ -77,9 +77,6 @@ body {
   footer.app-footer {
     display: none !important;
   }
-  aside.app-rail {
-    display: none !important;
-  }
   .app-banner {
     aspect-ratio: 3 / 4 !important;
     min-height: 0 !important;

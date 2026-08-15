@@ -32,7 +32,6 @@ export const site = {
     vi: "T2–T6 09:00–18:00 · T7 theo lịch hẹn",
     en: "Mon–Fri 09:00–18:00 · Sat by appointment",
   },
-  instagram: "https://www.instagram.com/vipcosmeticacademy/",
   certifications: ["DEKRA", "AZAV", "NiSV"],
 };
 
