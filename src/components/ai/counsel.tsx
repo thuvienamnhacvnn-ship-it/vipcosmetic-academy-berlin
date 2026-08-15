@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { MessageCircle, Send, X } from "lucide-react";
 
@@ -13,6 +13,12 @@ export function CounselWidget() {
   const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([
     { role: "assistant", content: t("greeting") },
   ]);
+
+  useEffect(() => {
+    const open = () => setOpen(true);
+    window.addEventListener("vca-counsel", open);
+    return () => window.removeEventListener("vca-counsel", open);
+  }, []);
 
   async function send() {
     const text = input.trim();
@@ -41,13 +47,13 @@ export function CounselWidget() {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-gold px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink shadow-lg"
+          className="fixed bottom-24 right-4 z-40 hidden items-center gap-2 rounded-full bg-gold px-4 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink shadow-lg lg:bottom-5 lg:flex"
         >
           <MessageCircle className="h-4 w-4" />
           {t("open")}
         </button>
       ) : (
-        <div className="fixed bottom-4 right-4 z-50 flex h-[28rem] w-[min(24rem,calc(100vw-1.5rem))] flex-col overflow-hidden border border-border bg-background shadow-2xl">
+        <div className="fixed inset-x-3 bottom-[5.5rem] z-[70] flex h-[min(28rem,70dvh)] flex-col overflow-hidden border border-border bg-background shadow-2xl lg:inset-auto lg:bottom-4 lg:right-4 lg:h-[28rem] lg:w-[min(24rem,calc(100vw-1.5rem))]">
           <div className="flex items-center justify-between border-b border-border px-4 py-3">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-gold-fg">{t("title")}</p>
             <button type="button" onClick={() => setOpen(false)} aria-label="Close">

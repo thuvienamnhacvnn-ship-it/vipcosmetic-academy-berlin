@@ -10,7 +10,7 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
   }));
 
   return (
-    <div className="mx-auto max-w-3xl px-5 pb-24 pt-32">
+    <div className="mx-auto max-w-3xl px-5 pb-24 pt-5 lg:pt-32">
       <h1 className="display text-5xl">{t("title")}</h1>
       <div className="mt-10 space-y-6">
         {items.map((item) => (

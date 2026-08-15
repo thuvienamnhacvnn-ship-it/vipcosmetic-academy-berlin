@@ -34,7 +34,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="relative min-h-[68svh] overflow-hidden">
         <img src="/media/academy/01-class.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/20" />
-        <div className="relative mx-auto flex min-h-[68svh] max-w-[1400px] flex-col justify-end px-5 pb-14 pt-32 md:px-8">
+        <div className="relative mx-auto flex min-h-[68svh] max-w-[1400px] flex-col justify-end px-5 pb-14 pt-5 lg:pt-32 md:px-8">
           <p className="text-[0.68rem] uppercase tracking-[0.32em] text-gold">{site.name}</p>
           <h1 className="display mt-3 text-5xl text-white md:text-7xl">{t("title")}</h1>
           <p className="mt-4 max-w-xl text-base text-white/75 md:text-lg">{t("lead")}</p>

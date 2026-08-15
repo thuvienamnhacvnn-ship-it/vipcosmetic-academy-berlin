@@ -18,7 +18,7 @@ export default async function ShopPage({
   const list = products.filter((p) => !cat || p.category === cat);
 
   return (
-    <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pb-24 pt-32 lg:grid-cols-[1fr_320px] md:px-8">
+    <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pb-24 pt-5 lg:pt-32 lg:grid-cols-[1fr_320px] md:px-8">
       <div>
         <h1 className="display text-5xl md:text-7xl">{t("title")}</h1>
         <p className="mt-3 max-w-xl text-muted">{t("lead")}</p>

@@ -25,8 +25,14 @@ export function Header({ locale }: { locale: string }) {
   const path = usePathname();
   const [open, setOpen] = useState(false);
 
+  const admin = path.startsWith("/admin") || path.startsWith("/login");
+
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur-md dark:border-white/10">
+    <header
+      className={`${
+        admin ? "block" : "hidden lg:block"
+      } fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur-md dark:border-white/10`}
+    >
       <div className="mx-auto flex h-[4.5rem] max-w-[1400px] items-center justify-between gap-3 px-5 md:px-8">
         <Link href="/" aria-label="VIP Cosmetic Academy" className="shrink-0">
           <BrandMark size="sm" light />

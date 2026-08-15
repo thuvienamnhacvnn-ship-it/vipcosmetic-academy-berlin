@@ -9,7 +9,7 @@ export async function Footer() {
   const tl = await getTranslations("legal");
 
   return (
-    <footer className="mt-auto border-t border-border">
+    <footer className="mt-auto hidden border-t border-border lg:block">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <BrandMark size="md" />

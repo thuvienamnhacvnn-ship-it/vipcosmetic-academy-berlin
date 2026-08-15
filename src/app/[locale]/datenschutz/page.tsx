@@ -1,6 +1,6 @@
 export default function PrivacyPage() {
   return (
-    <div className="mx-auto max-w-2xl px-5 pb-24 pt-32 text-sm leading-relaxed text-muted">
+    <div className="mx-auto max-w-2xl px-5 pb-24 pt-5 lg:pt-32 text-sm leading-relaxed text-muted">
       <h1 className="display text-4xl text-foreground">Datenschutz</h1>
       <p className="mt-6">
         Wir speichern Anmeldungen und Kontaktanfragen, um Ihre Anfrage zu bearbeiten. Es findet

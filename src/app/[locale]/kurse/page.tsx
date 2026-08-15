@@ -19,7 +19,7 @@ export default async function CoursesPage({
   const list = publishedCourses().filter((c) => !dept || c.department === dept);
 
   return (
-    <div className="mx-auto max-w-[1400px] px-5 pb-24 pt-32 md:px-8">
+    <div className="mx-auto max-w-[1400px] px-5 pb-24 pt-5 lg:pt-32 md:px-8">
       <h1 className="display text-5xl md:text-7xl">{t("title")}</h1>
       <p className="mt-4 max-w-2xl text-muted">{t("lead")}</p>
       <div className="mt-8 flex flex-wrap gap-2">

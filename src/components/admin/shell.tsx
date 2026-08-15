@@ -29,7 +29,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-32 lg:grid-cols-[220px_1fr]">
+    <div className="mx-auto grid max-w-6xl gap-8 px-4 pb-16 pt-5 lg:pt-5 lg:pt-32 lg:grid-cols-[220px_1fr]">
       <aside className="frame h-fit rounded-sm p-4">
         <p className="text-[0.65rem] uppercase tracking-[0.2em] text-gold-fg">Admin</p>
         <nav className="mt-4 space-y-1">

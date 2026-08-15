@@ -58,6 +58,12 @@ body {
   min-height: 100dvh;
 }
 
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 ::selection {
   background: color-mix(in oklab, var(--gold) 40%, transparent);
 }

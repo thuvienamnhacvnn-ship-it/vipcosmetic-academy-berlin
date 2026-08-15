@@ -8,7 +8,7 @@ export default async function LoginPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   if (await isAuthenticated()) redirect(`/${locale}/admin`);
   return (
-    <div className="px-4 pb-24 pt-32">
+    <div className="px-4 pb-24 pt-5 lg:pt-32">
       <LoginForm />
     </div>
   );

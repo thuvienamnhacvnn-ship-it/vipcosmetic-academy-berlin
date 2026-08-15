@@ -22,7 +22,7 @@ export default async function CourseDetail({
   const tc = await getTranslations("cta");
 
   return (
-    <article className="pt-20">
+    <article className="lg:pt-20">
       <div className="relative h-[46vh] min-h-[320px] overflow-hidden">
         <img src={deptImage(course.department)} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/10" />

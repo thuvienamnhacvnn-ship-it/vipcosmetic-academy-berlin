@@ -11,7 +11,7 @@ export default async function StudentRegisterPage({ params }: { params: Promise<
   if (await getStudentSession()) redirect(`/${locale}/konto`);
   const t = await getTranslations("account");
   return (
-    <div className="mx-auto max-w-md px-5 pb-24 pt-32">
+    <div className="mx-auto max-w-md px-5 pb-24 pt-5 lg:pt-32">
       <h1 className="display text-4xl">{t("register")}</h1>
       <p className="mt-3 text-sm text-muted">{t("registerLead")}</p>
       <div className="mt-8">

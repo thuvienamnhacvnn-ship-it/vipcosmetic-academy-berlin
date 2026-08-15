@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { SocialRail } from "@/components/layout/social-rail";
+import { TabBar } from "@/components/layout/tab-bar";
 import { CounselWidget } from "@/components/ai/counsel";
 import { themeInitScript } from "@/components/theme-toggle";
 import { site } from "@/data/site";
@@ -27,6 +28,7 @@ export function generateStaticParams() {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#0c0a08" },
     { media: "(prefers-color-scheme: light)", color: "#f7f1e8" },
@@ -45,6 +47,7 @@ export async function generateMetadata({
     title: { default: `${site.name} — ${t("slogan")}`, template: `%s · ${site.name}` },
     description: t("slogan"),
     icons: { icon: [{ url: "/logo/vip-logo.png" }] },
+    appleWebApp: { capable: true, title: site.name, statusBarStyle: "black-translucent" },
   };
 }
 
@@ -69,10 +72,11 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header locale={locale} />
           <SocialRail />
-          <main id="main" className="flex-1">
+          <main id="main" className="flex-1 pb-[5.75rem] lg:pb-0">
             {children}
           </main>
           <Footer />
+          <TabBar locale={locale} />
           <CounselWidget />
         </NextIntlClientProvider>
       </body>

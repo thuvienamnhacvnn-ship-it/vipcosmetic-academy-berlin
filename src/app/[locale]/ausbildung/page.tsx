@@ -11,7 +11,7 @@ export default async function TrainingPage({ params }: { params: Promise<{ local
   const t = await getTranslations("home");
 
   return (
-    <div className="mx-auto max-w-[1400px] px-5 pb-24 pt-32 md:px-8">
+    <div className="mx-auto max-w-[1400px] px-5 pb-24 pt-5 lg:pt-32 md:px-8">
       <h1 className="display text-5xl md:text-7xl">{t("deptsTitle")}</h1>
       <p className="mt-3 max-w-2xl text-muted">{t("deptsLead")}</p>
       <div className="mt-12 space-y-16">

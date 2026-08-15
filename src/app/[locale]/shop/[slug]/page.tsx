@@ -21,7 +21,7 @@ export default async function ProductPage({
   const t = await getTranslations("shop");
 
   return (
-    <article className="mx-auto grid max-w-5xl gap-10 px-5 pb-24 pt-32 md:grid-cols-2">
+    <article className="mx-auto grid max-w-5xl gap-10 px-5 pb-24 pt-5 lg:pt-32 md:grid-cols-2">
       <img src={p.image} alt="" className="aspect-[4/3] w-full object-cover" />
       <div>
         <Link href="/shop" className="text-[0.68rem] uppercase tracking-[0.18em] text-gold-fg">

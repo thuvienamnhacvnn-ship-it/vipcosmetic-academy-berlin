@@ -14,7 +14,7 @@ export function Banner({ slides, children }: { slides: string[]; children: React
   }, [slides.length]);
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:min-h-[100svh]">
       {slides.map((src, n) => (
         <div
           key={src}
@@ -27,15 +27,15 @@ export function Banner({ slides, children }: { slides: string[]; children: React
             src={src}
             alt=""
             className={cn(
-              "h-full w-full object-cover object-[45%_center] will-change-transform",
+              "h-full w-full object-cover object-center will-change-transform lg:object-[45%_center]",
               n === i ? "animate-banner-ken" : "",
             )}
           />
         </div>
       ))}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/30 via-black/40 to-black/78" />
-      <div className="relative z-10">{children}</div>
-      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/75 lg:bg-gradient-to-r lg:from-black/30 lg:via-black/40 lg:to-black/78" />
+      <div className="relative z-10 h-full">{children}</div>
+      <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2 lg:bottom-6">
         {slides.map((_, n) => (
           <button
             key={n}

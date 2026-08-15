@@ -8,7 +8,7 @@ export default async function FundingPage({ params }: { params: Promise<{ locale
   const tc = await getTranslations("cta");
 
   return (
-    <div className="mx-auto max-w-3xl px-5 pb-24 pt-32">
+    <div className="mx-auto max-w-3xl px-5 pb-24 pt-5 lg:pt-32">
       <h1 className="display text-5xl">{t("title")}</h1>
       <p className="mt-4 text-lg text-muted">{t("lead")}</p>
       <div className="mt-10 space-y-8">

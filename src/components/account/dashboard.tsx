@@ -44,7 +44,7 @@ export function StudentDashboard({
   }
 
   return (
-    <div className="mx-auto max-w-3xl space-y-10 px-5 pb-24 pt-32">
+    <div className="mx-auto max-w-3xl space-y-10 px-5 pb-24 pt-5 lg:pt-5 lg:pt-32">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-[0.68rem] uppercase tracking-[0.22em] text-gold-fg">{t("title")}</p>

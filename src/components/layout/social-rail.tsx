@@ -25,7 +25,7 @@ export function SocialRail() {
 
   return (
     <aside
-      className="pointer-events-none fixed left-3 top-1/2 z-40 -translate-y-1/2 sm:left-4"
+      className="pointer-events-none fixed left-3 top-1/2 z-40 hidden -translate-y-1/2 lg:block lg:left-4"
       aria-label="Social media"
     >
       <div className="pointer-events-auto flex flex-col items-center gap-3">
