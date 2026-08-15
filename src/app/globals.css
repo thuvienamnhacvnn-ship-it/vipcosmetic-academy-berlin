@@ -1,0 +1,161 @@
+@import "tailwindcss" source("../");
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-gold: #cba975;
+  --color-gold-deep: #a67c4e;
+  --color-ivory: #f4ede1;
+  --color-ink: #1c1410;
+  --color-espresso: #0c0a08;
+
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--line);
+  --color-gold-fg: var(--gold);
+  --color-danger: #c45c4a;
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), "Times New Roman", serif;
+
+  --shadow-gold: 0 20px 60px -28px color-mix(in oklab, var(--gold) 55%, transparent);
+}
+
+/* Dark luxury — default */
+:root,
+.dark {
+  --bg: #0c0a08;
+  --surface: #16120e;
+  --surface-2: #1e1914;
+  --fg: #f4ede1;
+  --muted: #b7a894;
+  --line: rgba(203, 169, 117, 0.22);
+  --gold: #cba975;
+}
+
+/* Light artistic */
+html:not(.dark) {
+  --bg: #f7f1e8;
+  --surface: #fffaf3;
+  --surface-2: #efe4d4;
+  --fg: #1c1410;
+  --muted: #6b5b4a;
+  --line: rgba(28, 20, 16, 0.12);
+  --gold: #8d6233;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--gold) 40%, transparent);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@keyframes banner-ken {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+.animate-banner-ken {
+  animation: banner-ken 7.2s linear forwards;
+}
+
+.hairline {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  height: 1px;
+}
+
+.gold-text {
+  background: linear-gradient(120deg, #f3e2c2, var(--gold) 40%, #8a6a3b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.frame {
+  border: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 88%, transparent);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veil {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 10, 8, 0.35) 0%,
+    rgba(12, 10, 8, 0.15) 40%,
+    rgba(12, 10, 8, 0.72) 100%
+  );
+}
+
+html:not(.dark) .veil {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 20, 16, 0.18) 0%,
+    rgba(28, 20, 16, 0.08) 40%,
+    rgba(28, 20, 16, 0.55) 100%
+  );
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: 0.4rem;
+  padding: 0.75rem 0.9rem;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--gold) 25%, transparent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.8rem 1.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+}
+.btn-gold {
+  background: var(--gold);
+  color: #1c1410;
+}
+.btn-gold:hover {
+  filter: brightness(1.08);
+}
+.btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--fg);
+}
+.btn-ghost:hover {
+  border-color: var(--gold);
+}

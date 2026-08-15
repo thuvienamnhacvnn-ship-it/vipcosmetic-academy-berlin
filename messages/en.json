@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "slogan": "Beauty needs quality."
+  },
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "training": "Programmes",
+    "funding": "Funding",
+    "about": "Academy",
+    "apply": "Apply",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "cta": {
+    "apply": "Apply now",
+    "consult": "Request advice",
+    "call": "Call",
+    "viewCourses": "All courses",
+    "details": "Details"
+  },
+  "home": {
+    "title": "Your beauty training.",
+    "lead": "Lashes, nails, skin, foot care, permanent makeup. Hands-on, certified, studio-ready.",
+    "deptsTitle": "Five trades. One campus.",
+    "featuredTitle": "Featured programmes"
+  },
+  "courses": {
+    "title": "Course catalogue",
+    "all": "All"
+  },
+  "admin": {
+    "login": "Admin sign-in",
+    "password": "Password",
+    "enter": "Enter"
+  }
+}
