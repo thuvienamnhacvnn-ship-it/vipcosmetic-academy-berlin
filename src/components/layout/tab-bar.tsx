@@ -48,7 +48,7 @@ export function TabBar({ locale }: { locale: string }) {
   return (
     <>
       <nav
-        className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-espresso/92 px-2 pt-2 backdrop-blur-xl lg:hidden"
+        className="app-tabs fixed inset-x-0 bottom-0 z-50 hidden border-t border-gold/30 bg-[#0c0a08]/95 px-2 pt-2 backdrop-blur-xl"
         style={{ paddingBottom: "max(0.55rem, env(safe-area-inset-bottom))" }}
         aria-label="App menu"
       >
@@ -110,7 +110,7 @@ export function TabBar({ locale }: { locale: string }) {
       </nav>
 
       {more ? (
-        <div className="fixed inset-0 z-[60] lg:hidden">
+        <div className="app-tabs-sheet fixed inset-0 z-[60]">
           <button type="button" className="absolute inset-0 bg-black/65" aria-label="Close" onClick={() => setMore(false)} />
           <div
             className="absolute inset-x-0 bottom-0 rounded-t-3xl border-t border-gold/25 bg-espresso px-5 pt-4 text-white"

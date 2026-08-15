@@ -21,7 +21,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <Banner slides={media.banner}>
-        <div className="flex h-full flex-col items-center justify-center px-6 text-center lg:hidden">
+        <div className="app-hero-mob flex h-full min-h-[inherit] flex-col items-center justify-center px-6 text-center">
           <img
             src="/logo/vip-mark.png"
             alt="VIP Cosmetic Academy"
@@ -36,7 +36,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </Link>
           </div>
         </div>
-        <div className="mx-auto hidden min-h-[100svh] max-w-[1400px] items-end justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20 lg:flex">
+        <div className="app-hero-desk mx-auto hidden min-h-[100svh] max-w-[1400px] items-end justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
           <div className="w-full max-w-xl text-white md:text-right">
             <img
               src="/logo/vip-mark.png"

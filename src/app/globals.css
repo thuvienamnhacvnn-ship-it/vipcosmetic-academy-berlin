@@ -58,9 +58,42 @@ body {
   min-height: 100dvh;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   body {
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: calc(5.75rem + env(safe-area-inset-bottom));
+  }
+  header.app-header:not(.is-admin) {
+    display: none !important;
+  }
+  nav.app-tabs {
+    display: block !important;
+  }
+  .app-hero-desk {
+    display: none !important;
+  }
+  .app-hero-mob {
+    display: flex !important;
+  }
+  footer.app-footer {
+    display: none !important;
+  }
+  aside.app-rail {
+    display: none !important;
+  }
+  .app-banner {
+    aspect-ratio: 3 / 4 !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav.app-tabs,
+  .app-hero-mob {
+    display: none !important;
+  }
+  .app-hero-desk {
+    display: flex !important;
   }
 }
 

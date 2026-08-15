@@ -14,7 +14,7 @@ export function Banner({ slides, children }: { slides: string[]; children: React
   }, [slides.length]);
 
   return (
-    <section className="relative aspect-[3/4] overflow-hidden lg:aspect-auto lg:min-h-[100svh]">
+    <section className="app-banner relative overflow-hidden lg:min-h-[100svh]">
       {slides.map((src, n) => (
         <div
           key={src}

@@ -29,9 +29,7 @@ export function Header({ locale }: { locale: string }) {
 
   return (
     <header
-      className={`${
-        admin ? "block" : "hidden lg:block"
-      } fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur-md dark:border-white/10`}
+      className={`app-header ${admin ? "is-admin block" : ""} fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-black/25 backdrop-blur-md dark:border-white/10`}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-[1400px] items-center justify-between gap-3 px-5 md:px-8">
         <Link href="/" aria-label="VIP Cosmetic Academy" className="shrink-0">
