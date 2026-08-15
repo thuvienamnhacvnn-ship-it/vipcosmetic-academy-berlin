@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, Phone } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 import { usePathname } from "@/i18n/navigation";
 import { site } from "@/data/site";
 
@@ -14,7 +14,6 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 const items = [
   { href: site.instagram, label: "Instagram", icon: Instagram },
-  { href: site.facebook, label: "Facebook", icon: Facebook },
   { href: site.whatsapp, label: "WhatsApp", icon: WhatsAppIcon },
   { href: site.phoneHref, label: `Hotline ${site.phone}`, icon: Phone },
 ];

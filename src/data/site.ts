@@ -33,7 +33,6 @@ export const site = {
     en: "Mon–Fri 09:00–18:00 · Sat by appointment",
   },
   instagram: "https://www.instagram.com/vipcosmeticacademy/",
-  facebook: "https://www.facebook.com/p/VIP-Cosmetic-Academy-61577009440648/",
   certifications: ["DEKRA", "AZAV", "NiSV"],
 };
 
