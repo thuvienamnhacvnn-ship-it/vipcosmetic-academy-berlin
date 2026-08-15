@@ -1,8 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const DIR = path.join(process.cwd(), "data-store");
-
 export type StoreName =
   | "enrollments"
   | "inquiries"
@@ -21,23 +19,38 @@ export type StoredRecord = {
   [key: string]: unknown;
 };
 
+const DIR = process.env.VERCEL
+  ? path.join("/tmp", "vip-academy-data")
+  : path.join(process.cwd(), "data-store");
+
+const memory = new Map<StoreName, StoredRecord[]>();
+
 async function fileOf(name: StoreName) {
   await mkdir(DIR, { recursive: true });
   return path.join(DIR, `${name}.json`);
 }
 
 export async function readRecords(name: StoreName): Promise<StoredRecord[]> {
+  const cached = memory.get(name);
+  if (cached) return cached;
   try {
     const raw = await readFile(await fileOf(name), "utf8");
     const data = JSON.parse(raw);
-    return Array.isArray(data) ? data : [];
+    const rows = Array.isArray(data) ? (data as StoredRecord[]) : [];
+    memory.set(name, rows);
+    return rows;
   } catch {
     return [];
   }
 }
 
 export async function writeRecords(name: StoreName, records: StoredRecord[]) {
-  await writeFile(await fileOf(name), JSON.stringify(records, null, 2), "utf8");
+  memory.set(name, records);
+  try {
+    await writeFile(await fileOf(name), JSON.stringify(records, null, 2), "utf8");
+  } catch {
+    /* /tmp or memory — Vercel filesystem may be ephemeral */
+  }
 }
 
 export async function addRecord(name: StoreName, record: Omit<StoredRecord, "id" | "createdAt"> & Partial<StoredRecord>) {
